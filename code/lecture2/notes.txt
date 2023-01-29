@@ -1,0 +1,106 @@
+Python is an intepretative language
+An intepreter tries to read your code and execute what you say.
+
+###########_name.py_##################
+name = input()
+print(f"hello, {name}!") <- take the variable name and plug it in here. Known as a format string.
+######################################
+f <- allows us to input from somewhere else 
+
+###########_variables.py_#############
+b = True
+print(f"b is {b}"")
+
+n = None
+print(f"n is {n}")
+######################################
+
+Python sets 
+
+s = set() -> Each value unique
+
+Python classes
+--------------
+Defining entirely new types
+
+class Point:
+	def __init__(self, x, y):
+		self.x = x
+		self.y = y
+p = Point(3 ,5)
+print(p.x)
+print(p.y)
+
+HTTP
+----
+HTTP request and responses
+Flask is a micro framework written in Python that allows us to execute web applications
+
+#####_application.py_########
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+	return "Hello,world!"
+#############################
+
+What if we add the below to the above?
+@app.route("/david")
+def david():
+	retiurn "Hello, David!"
+
+You can now access this on /david
+
+Can use HTML and Python content directly in Flask apps. However, this can get complicated. We can however tie HTML files into Flask. 
+-----------------------------------------
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+	return render_template("index.html")
+------------------------------------------
+
+Allows us to display an HTML page, but by routing it through Flask. This is powerful. 
+
+-----------------------------------------------------------------------------------------------------------
+from flask import Flask, render_template # This is essentially backend Python script
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+	headline = "Hello, world!"
+	return render_template("index.html", headline=headline) # Defining the variable headline in index.html
+-----------------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My website!</title>
+	</head>
+	<body>
+		<h1>
+			{{ headline }}  -> Ginga2 templating language
+		</h1>
+	</body>
+</html>
+
+isitchristmas.com
+
+flask template inheritance
+
+POST versus GET
+	1) POST means submit data to the server
+	2) GET means get data from the server
+
+from flask import Flask, render_template, request
+	...
+	name = request.form.get("name")
+	return render_template(...)
+
+Sessions - the idea that when you log into the website, you have access to some session that is data specific to your account
+
