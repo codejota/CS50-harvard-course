@@ -19,3 +19,4 @@ Notes and practice projects about Web Develloping of Harvard University CS50 cou
 | Lecture                                                           | Title / Contents     | Materials                                                                | Project / Exercise / Course                                     |
 | ----------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------- |
 | [Lecture 0](https://www.youtube.com/embed/zFZrkCIc2Oc) | Overview, HTML/CSS | [slides](https://github.com/codejota/CS50-harvard-course/blob/main/Slides/Lecture0/lecture0.pdf), [code](https://github.com/codejota/CS50-harvard-course/tree/main/code/lecture0) | [Search Engine like a Google](https://github.com/codejota/web50/tree/main/web50/projects/2020/x/search)                                                      |
+ 
