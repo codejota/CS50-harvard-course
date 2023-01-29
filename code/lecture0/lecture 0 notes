@@ -1,0 +1,179 @@
+git allows for version control
+
+What does git do at a high level?
+	- Keep track of changes to your code
+	- Sync code between different people
+	- Test code without losing original copy
+		- Test new features while preserving working features
+	- Reverting back to old versions of your code
+
+GitHub is just a website to store git repos on the internet and share with other people
+
+git clone <url> -> takes a repo stored somewhere else and creates a copy on your computer
+
+cd -> change directory
+
+ls -> list all files in directoy
+
+touch -> creates a brand new file
+
+git add <filename> -> tells git to track that file the next time I save a copy of the repo
+
+git commit -m "message" -> commit to GitHub and explain what is different with the code
+
+git status -> tells you what is currently goin on in your repo 
+
+git push -> push updates to the remote server
+
+git pull -> download the latest remote server changes of your repository
+
+Merge Conflicts
+----------------
+When changes made to the same lines of the same files. 
+
+git log -> shows you a history of all of the commits that have been made
+
+git reset --hard <commit> -> reset whole repo back to that commit hash
+git reset --hard origin/master -> reset whole repo back to the origin 
+
+git commit -am -> add and commit message at same time
+
+git reflog 
+
+HTML .....
+-----------
+<!DOCTYPE html>  -> Tells us that this is an HTML document
+
+<head> -> info about the page (metadata)
+
+<title> -> Assigns the title of the webpage
+
+<body> -> the body of the website
+
+in terminal use 'open index.html' to automatically open the page 
+
+The indentation in HTML is just style. It is not necessary. 
+
+<h1></h1>  -> This introduces headers. The number represents the size (1-6)
+
+Control Click in Chrome and then View Page Source
+
+<ul>  -> Unordered list
+
+<li> -> list item
+
+<ol> -> Ordered list
+
+Inserting an image into a webpage
+	<img src="cat.jpg">
+Giving attributes to our image
+	<img src="cat.jpg" height="200" width="300">
+
+Could also leave off one of the arguments and have it render nicely
+
+Could also specifiy pixels or as a percentage
+	- As a percentage, the image moves as your shrink the webpage
+
+Rendering tables in HTML
+
+<table> -> initiate table
+<tr> -> table row
+<th> -> table headers
+<td> -> table data
+
+Creating an html form
+<form> -> initiate a form
+<input type="text" placeholder="Full name" name="name">
+<button>Submit!</button> 
+
+Document Object Model
+	-Think of tree structures
+
+CSS - Cascading Style Sheets
+----------------------------
+Interacts with HTML to make it pretty
+<h1 style="color:blue;text-align:center;">Welcome to My Web Page!</h1>
+
+These are two CSS properties within our HTML code. 
+
+Can also use color HEX values instead of English color names 
+
+Google "html color picker" -> Gives you HEX and RGB codes
+
+HEX is RGB represented in base16 
+
+--------------------------------------------------
+# Applies to the whole page whereever h1 appears
+<style>
+h1 {
+	color: blue;
+	text-align: center;
+}
+</style>
+
+<h1>Welcome to my webpage!</h1>
+<h1>This is my second same style header!</h1> 
+--------------------------------------------------
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+------------------
+$ styles.css
+------------------
+h1 {
+	color: blue;
+	text-align: center;
+}
+-------------------
+
+
+
+Common CSS Properties
+---------------------
+<div></div> -> a section of code that you wish to do something with
+
+div {
+	background-color: teal;
+}
+
+
+OR FONTS
+div {
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold; 
+}
+
+
+
+<style>
+	table {
+		border: 3px solid black;
+		border-collapse: collapse;
+		width: 50% 
+	}
+	th, td {
+		border: 1px solid black;
+		text-align: center;
+	}
+	th {
+		background-color: light grey;
+	}
+</style>
+
+
+// Putting in a div just to name it as the top of the webpage
+
+<body>
+	<div id="top">
+		This is the <span class="name">top</span> of the page.
+	</div>
+</body>
+
+At somepoint, I can refer to all of the different span classees named "name" to edit the styling. 
+
+#top -> # short for id. Get me all things that are id top 
+
+.name _> . short for class. Get me all things that are class name 
