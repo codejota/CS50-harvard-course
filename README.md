@@ -6,7 +6,7 @@ In this repository, I will leave notes about the CS50 course classe
 | :sparkles: Name        | **Web Programming with Python and JavaScript**
 | :label: Technology | Javascript & Python
 | :rocket: URL         | https://github.com/codejota/CS50-harvard-course
-| :fire: Challange     | CS50 Certificate
+| :fire: Challange     | CS50 Certificate.
  
 ![](https://jotacode.dev/img-upload/logogithubharvard.png)
 
